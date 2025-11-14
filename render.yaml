@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: robotics-backend
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn robotics_website.wsgi --bind 0.0.0.0:$PORT"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: robotics_website.settings
