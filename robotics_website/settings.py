@@ -12,10 +12,11 @@ DEBUG = False  # Keep False for production
 
 # Allow Render's hostname
 ALLOWED_HOSTS = [
-    "robotics-backend-3.onrender.com",  # your Render URL
     "localhost",
-    "127.0.0.1"
+    "127.0.0.1",
+    ".onrender.com"  # This allows all Render subdomains
 ]
+
 
 # Application definition
 INSTALLED_APPS = [
